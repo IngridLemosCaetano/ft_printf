@@ -6,10 +6,10 @@
 /*   By: ilemos-c <ilemos-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/13 13:46:12 by ilemos-c          #+#    #+#             */
-/*   Updated: 2025/08/13 15:07:30 by ilemos-c         ###   ########.fr       */
+/*   Updated: 2025/08/19 13:57:01 by ilemos-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-int	ft_printf(const char *, char...);
+int	ft_printf(const char *format, ...);
