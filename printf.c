@@ -6,7 +6,7 @@
 /*   By: ilemos-c <ilemos-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/13 13:46:12 by ilemos-c          #+#    #+#             */
-/*   Updated: 2025/08/19 17:17:22 by ilemos-c         ###   ########.fr       */
+/*   Updated: 2025/08/21 12:40:10 by ilemos-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,19 @@
 
 size_t	conversion_string(char *str)
 {
-	size_t	byte;
+	size_t	len;
 
 	if (str)
 	{
-		byte = ft_strlen(str);
+		len = ft_strlen(str);
 		ft_putstr_fd(str, 1);
 	}
 	else
 	{
-		byte = 6;
+		len = 6;
 		ft_putstr_fd("(null)", 1);
 	}
-	return (byte);
+	return (len);
 }
 
 size_t	ft_nbrlen_unsigned(unsigned int n)
@@ -50,7 +50,7 @@ void	ft_putnbr_unsigned(unsigned int n)
 		ft_putchar_fd((n + '0'), 1);
 }
 
-size_t	ft_conversion(char c, va_list args)
+size_t	ft_direction(char c, va_list args)
 {
 	size_t	byte;
 	char	*str;
@@ -92,7 +92,7 @@ int	ft_printf(const char *format, ...)
 	{
 		if (format[i] == '%' && format[i + 1])
 		{
-			num_bytes += ft_conversion(format[i + 1], args);
+			num_bytes += ft_direction(format[i + 1], args);
 			i++;
 		}
 		else

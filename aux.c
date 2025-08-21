@@ -1,16 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   aux.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ilemos-c <ilemos-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/01 22:23:27 by ingrid            #+#    #+#             */
-/*   Updated: 2025/08/09 11:35:19 by ilemos-c         ###   ########.fr       */
+/*   Created: 2025/08/21 13:29:04 by ilemos-c          #+#    #+#             */
+/*   Updated: 2025/08/21 13:29:30 by ilemos-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libftprintf.h"
+
+void	ft_putchar_fd(char c, int fd)
+{
+	if (fd < 0)
+		return ;
+	write (fd, &c, 1);
+}
+
+void	ft_putstr_fd(char *s, int fd)
+{
+	if (fd < 0)
+		return ;
+	if (s)
+		write(fd, s, ft_strlen(s));
+}
 
 void	ft_putnbr_fd(int n, int fd)
 {
@@ -37,10 +52,13 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putchar_fd((n + '0'), fd);
 	}
 }
-/*
-int	main(void)
+
+size_t	ft_strlen(const char *s)
 {
-	ft_putnbr_fd(-42,1);
-	write(1, "\n", 1);
-	return (0);
-}*/
+	int	i;
+
+	i = 0;
+	while (s[i])
+		i++;
+	return (i);
+}

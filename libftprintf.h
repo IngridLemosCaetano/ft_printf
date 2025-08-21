@@ -6,7 +6,7 @@
 /*   By: ilemos-c <ilemos-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/13 13:27:20 by ilemos-c          #+#    #+#             */
-/*   Updated: 2025/08/19 15:29:31 by ilemos-c         ###   ########.fr       */
+/*   Updated: 2025/08/21 13:29:45 by ilemos-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,15 @@
 # include <stdlib.h>
 # include <stdio.h>
 # include <stdarg.h>
-# include "libft/libft.h"
 
+void	ft_putchar_fd(char c, int fd);
+void	ft_putstr_fd(char *s, int fd);
+void	ft_putnbr_fd(int n, int fd);
+size_t	ft_strlen(const char *s);
 int		ft_printf(const char *format, ...);
-size_t	ft_conversion(char c, va_list args);
-size_t	t_string(char *str);
+size_t	conversion_string(char *str);
+size_t	ft_nbrlen_unsigned(unsigned int n);
+void	ft_putnbr_unsigned(unsigned int n);
+size_t	ft_direction(char c, va_list args);
 
 #endif
