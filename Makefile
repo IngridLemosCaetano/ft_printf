@@ -6,17 +6,18 @@
 #    By: ilemos-c <ilemos-c@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/08/13 13:27:07 by ilemos-c          #+#    #+#              #
-#    Updated: 2025/08/21 13:27:59 by ilemos-c         ###   ########.fr        #
+#    Updated: 2025/08/21 13:59:57 by ilemos-c         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = printf.a
+NAME = libftprintf.a
 
 CC = cc
 FLAGS = -Wall -Wextra -Werror
 AR = ar rcs
 SRCS =	printf.c \
-		aux.c
+		libft.c \
+		auxiliary.c
 
 OBJS = $(SRCS:.c=.o)
 
@@ -35,3 +36,6 @@ fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
+
+debug:
+	$(CC) -g printf.c libft.c auxiliary.c -o printf_debug
