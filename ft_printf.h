@@ -6,7 +6,7 @@
 /*   By: ingrid <ingrid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/13 13:27:20 by ilemos-c          #+#    #+#             */
-/*   Updated: 2025/08/22 17:05:37 by ingrid           ###   ########.fr       */
+/*   Updated: 2025/08/22 18:15:27 by ingrid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,7 @@ int		ft_putnbr_unsigned(unsigned int n);
 void	ft_hex_lowercase(unsigned int n);
 void	ft_hex_uppercase(unsigned int n);
 int		ft_hex_len(unsigned int n, char c);
+
+void	ft_putptr_hex(char c);
 
 #endif

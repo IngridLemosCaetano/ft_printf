@@ -6,7 +6,7 @@
 /*   By: ingrid <ingrid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/21 13:32:29 by ilemos-c          #+#    #+#             */
-/*   Updated: 2025/08/22 17:17:08 by ingrid           ###   ########.fr       */
+/*   Updated: 2025/08/22 18:05:21 by ingrid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,13 @@
 
 int	ft_putnbr_len_unsigned(unsigned int n)
 {
-	unsigned int	temp;
-	int				len;
+	int	len;
 
-	temp = n;
 	len = 1;
 	ft_putnbr_unsigned(n);
-	while (temp / 10)
+	while (n / 10)
 	{
-		temp /= 10;
+		n /= 10;
 		len++;
 	}
 	return (len);

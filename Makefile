@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ilemos-c <ilemos-c@student.42.fr>          +#+  +:+       +#+         #
+#    By: ingrid <ingrid@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/08/13 13:27:07 by ilemos-c          #+#    #+#              #
-#    Updated: 2025/08/21 13:59:57 by ilemos-c         ###   ########.fr        #
+#    Updated: 2025/08/22 18:10:09 by ingrid           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,9 +15,10 @@ NAME = libftprintf.a
 CC = cc
 FLAGS = -Wall -Wextra -Werror
 AR = ar rcs
-SRCS =	printf.c \
-		libft.c \
-		auxiliary.c
+SRCS =	ft_printf.c \
+		ft_printf_basic.c \
+		ft_printf_unsigned_hex.c\
+		ft_printf_pointer.c
 
 OBJS = $(SRCS:.c=.o)
 
