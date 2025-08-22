@@ -3,57 +3,79 @@
 /*                                                        :::      ::::::::   */
 /*   libft.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ilemos-c <ilemos-c@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ingrid <ingrid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/21 13:29:04 by ilemos-c          #+#    #+#             */
-/*   Updated: 2025/08/21 13:39:38 by ilemos-c         ###   ########.fr       */
+/*   Updated: 2025/08/22 15:25:53 by ingrid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_putchar_fd(char c, int fd)
+int	ft_putchar(char c)
 {
-	if (fd < 0)
-		return ;
-	write (fd, &c, 1);
+	write (1, &c, 1);
+	return (1);
 }
 
-void	ft_putstr_fd(char *s, int fd)
+int	ft_putstr(char *str)
 {
-	if (fd < 0)
-		return ;
-	if (s)
-		write(fd, s, ft_strlen(s));
+	int	len;
+
+	if (str)
+	{
+		len = ft_strlen(str);
+		write(1, str, len);
+	}
+	else
+	{
+		len = 6;
+		write(1, "(null)", 6);
+	}
+	return (len);
 }
 
-void	ft_putnbr_fd(int n, int fd)
+int	ft_putnbr_len(int n)
 {
-	if (fd < 0)
-		return ;
+	int	len;
+
+	len = 1;
+	ft_putnbr(n);
+	if (n < 0)
+		len++;
+	while (n / 10)
+	{
+		n /= 10;
+		len++;
+	}
+	return (len);
+}
+
+void	ft_putnbr(int n)
+{
 	if (n == -2147483648)
 	{
-		ft_putchar_fd('-', fd);
-		ft_putchar_fd('2', fd);
+		ft_putchar('-');
+		ft_putchar('2');
 		n = 147483648;
 	}
 	if (n < 0)
 	{
-		ft_putchar_fd('-', fd);
+		ft_putchar('-');
 		n = -n;
 	}
 	if (n >= 10)
 	{
-		ft_putnbr_fd((n / 10), fd);
-		ft_putnbr_fd((n % 10), fd);
+		ft_putnbr(n / 10);
+		ft_putnbr(n % 10);
 	}
 	else
 	{
-		ft_putchar_fd((n + '0'), fd);
+		ft_putchar(n + '0');
 	}
 }
 
-size_t	ft_strlen(const char *s)
+int	ft_strlen(const char *s)
 {
 	int	i;
 
