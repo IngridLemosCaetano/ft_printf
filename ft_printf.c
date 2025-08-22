@@ -6,7 +6,7 @@
 /*   By: ingrid <ingrid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/13 13:46:12 by ilemos-c          #+#    #+#             */
-/*   Updated: 2025/08/22 20:00:13 by ingrid           ###   ########.fr       */
+/*   Updated: 2025/08/22 20:36:15 by ingrid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,8 @@ int	ft_printf(const char *format, ...)
 
 int	ft_direction(char c, va_list args)
 {
+	void	*ptr;
+
 	if (c == '%')
 		return (ft_putchar('%'));
 	if (c == 'c')
@@ -55,8 +57,21 @@ int	ft_direction(char c, va_list args)
 		return (ft_hex_len(va_arg(args, unsigned int), c));
 	if (c == 'p')
 		return (ft_putptr_len(va_arg(args, void *)));
-	return (0);
+	else
+		return (0);
 }
+// int	main(void)
+// {
+// 	int	x = 10;
+// 	int	*ptr = NULL;
+// 	int	num;
+// 	printf("ponteiro: %p\n", &x);
+// 	ft_printf("ponteiro: %p\n", &x);
+// 	printf("ponteiro: %p e len: %d\n", &ptr, ft_putptr_len(ptr));
+// 	num = ft_printf("ponteiro: %p\n", &ptr);
+// 	printf("%d\n", num);
+// 	return (0);
+// }
 
 // int	main(void)
 // {
@@ -65,10 +80,10 @@ int	ft_direction(char c, va_list args)
 // 	ft_printf("Char: %c\n", 'A');
 // 	ft_printf("String: %s\n", "Olá");
 // 	ft_printf("Ponteiro: %p\n", (void *)0x1234);
+// 	ft_printf("Ponteiro: %p\n", -1);
 // 	ft_printf("Decimal: %d \n", -100);
 // 	ft_printf("Decimal: %i\n", -100);
 // 	ft_printf("Unsigned: %u\n", -42);
-// 	printf("printf - Unsigned: %u\n", 42);
 // 	ft_printf("Hex: %x\n", 255);
 // 	ft_printf("HEX: %X\n", 255);
 // 	ft_printf("Porcentagem: %%\n");
