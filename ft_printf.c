@@ -6,7 +6,7 @@
 /*   By: ingrid <ingrid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/13 13:46:12 by ilemos-c          #+#    #+#             */
-/*   Updated: 2025/08/22 20:36:15 by ingrid           ###   ########.fr       */
+/*   Updated: 2025/08/22 20:41:33 by ingrid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,8 +41,6 @@ int	ft_printf(const char *format, ...)
 
 int	ft_direction(char c, va_list args)
 {
-	void	*ptr;
-
 	if (c == '%')
 		return (ft_putchar('%'));
 	if (c == 'c')
