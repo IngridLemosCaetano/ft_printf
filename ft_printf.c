@@ -6,7 +6,7 @@
 /*   By: ingrid <ingrid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/13 13:46:12 by ilemos-c          #+#    #+#             */
-/*   Updated: 2025/08/22 20:41:33 by ingrid           ###   ########.fr       */
+/*   Updated: 2025/08/24 13:13:26 by ingrid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,13 @@ int	ft_direction(char c, va_list args)
 	else
 		return (0);
 }
+
+// int	main(void)
+// {
+// 	printf(" %p %p ", 0, 0);
+// 	ft_printf("Original\n Ponteiro: %p", 0);
+// 	return (0);
+// }
 // int	main(void)
 // {
 // 	int	x = 10;
@@ -81,7 +88,7 @@ int	ft_direction(char c, va_list args)
 // 	ft_printf("Ponteiro: %p\n", -1);
 // 	ft_printf("Decimal: %d \n", -100);
 // 	ft_printf("Decimal: %i\n", -100);
-// 	ft_printf("Unsigned: %u\n", -42);
+// 	ft_printf("Unsigned: %u\n", 42);
 // 	ft_printf("Hex: %x\n", 255);
 // 	ft_printf("HEX: %X\n", 255);
 // 	ft_printf("Porcentagem: %%\n");
