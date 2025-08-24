@@ -6,7 +6,7 @@
 #    By: ingrid <ingrid@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/08/13 13:27:07 by ilemos-c          #+#    #+#              #
-#    Updated: 2025/08/24 14:23:12 by ingrid           ###   ########.fr        #
+#    Updated: 2025/08/24 20:22:29 by ingrid           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,8 +17,8 @@ FLAGS = -Wall -Wextra -Werror
 AR = ar rcs
 SRCS =	ft_printf.c \
 		ft_printf_basic.c \
-		ft_printf_unsigned_hex.c\
-		ft_printf_pointer.c
+		ft_printf_pointer.c \
+		ft_printf_unsigned_hex.c
 
 OBJS = $(SRCS:.c=.o)
 
@@ -37,6 +37,3 @@ fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
-
-debug:
-	$(CC) $(FLAGS) -g ft_printf.c ft_printf_basic.c ft_printf_unsigned_hex.c ft_printf_pointer.c -o printf_debug

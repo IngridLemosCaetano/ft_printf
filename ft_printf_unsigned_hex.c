@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   auxiliary.c                                        :+:      :+:    :+:   */
+/*   ft_printf_unsigned_hex.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ingrid <ingrid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/21 13:32:29 by ilemos-c          #+#    #+#             */
-/*   Updated: 2025/08/22 18:05:21 by ingrid           ###   ########.fr       */
+/*   Updated: 2025/08/24 20:21:13 by ingrid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ int	ft_putnbr_unsigned(unsigned int n)
 	return (0);
 }
 
-void	ft_hex_lowercase(unsigned int n)
+static void	ft_hex_lowercase(unsigned int n)
 {
 	int		rest;
 	char	c;
@@ -65,7 +65,7 @@ void	ft_hex_lowercase(unsigned int n)
 	}
 }
 
-void	ft_hex_uppercase(unsigned int n)
+static void	ft_hex_uppercase(unsigned int n)
 {
 	int		rest;
 	char	c;
