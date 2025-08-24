@@ -6,7 +6,7 @@
 /*   By: ingrid <ingrid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/13 13:46:12 by ilemos-c          #+#    #+#             */
-/*   Updated: 2025/08/24 13:13:26 by ingrid           ###   ########.fr       */
+/*   Updated: 2025/08/24 14:47:53 by ingrid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,8 +61,19 @@ int	ft_direction(char c, va_list args)
 
 // int	main(void)
 // {
-// 	printf(" %p %p ", 0, 0);
-// 	ft_printf("Original\n Ponteiro: %p", 0);
+// 	int	x = 10;
+// 	int	y = 20;
+// 	int	sum_printf_1 = printf("Ponteiro: %p %p\n", (void *)0x1234, &x);
+// 	int	sum_ft_printf_1 = ft_printf("Ponteiro: %p %p\n", (void *)0x1234, &x);
+
+// 	int	sum_printf_2 = printf("Ponteiro: %p\n", 0, 0);
+// 	int	sum_ft_printf_2 = ft_printf("Ponteiro: %p\n", 0, 0);
+
+// 	printf("%d\n",sum_printf_1);
+// 	printf("%d\n",sum_ft_printf_1);
+
+// 	printf("%d\n",sum_printf_2);
+// 	printf("%d\n",sum_ft_printf_2);
 // 	return (0);
 // }
 // int	main(void)
@@ -80,18 +91,20 @@ int	ft_direction(char c, va_list args)
 
 // int	main(void)
 // {
-// 	ft_printf("Char: %c Porcentagem: %%\n", 'a', '%');
+// 	int	x = 10;
+// 	int	y = 20;
+// 	ft_printf("Char: %c %c Porcentagem: %%\n", 'a', 65);
 // 	ft_printf("Porcentagem: %%\n");
 // 	ft_printf("Char: %c\n", 'A');
-// 	ft_printf("String: %s\n", "Olá");
-// 	ft_printf("Ponteiro: %p\n", (void *)0x1234);
-// 	ft_printf("Ponteiro: %p\n", -1);
-// 	ft_printf("Decimal: %d \n", -100);
-// 	ft_printf("Decimal: %i\n", -100);
-// 	ft_printf("Unsigned: %u\n", 42);
-// 	ft_printf("Hex: %x\n", 255);
-// 	ft_printf("HEX: %X\n", 255);
-// 	ft_printf("Porcentagem: %%\n");
+// 	ft_printf("String: %s %s\n", "Olá", " Ingrid");
+// 	ft_printf("Ponteiro: %p %p\n", (void *)0x1234, &x);
+// 	ft_printf("Ponteiro: %p\n", 0, &y);
+// 	ft_printf("Decimal: %d %d \n", -100, 10022);
+// 	ft_printf("Decimal: %i %i\n", -100, 420);
+// 	ft_printf("Unsigned: %u %u\n", 42, 33);
+// 	ft_printf("Hex: %x %x\n", 255, 300);
+// 	ft_printf("HEX: %X %X\n", 255, 300);
+// 	ft_printf("Porcentagem: %% %%\n");
 // 	ft_printf("Null: %s\n", NULL);
 // 	return (0);
 // }
