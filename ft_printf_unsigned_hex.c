@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf_unsigned_hex.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ingrid <ingrid@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ilemos-c <ilemos-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/21 13:32:29 by ilemos-c          #+#    #+#             */
-/*   Updated: 2025/08/24 20:21:13 by ingrid           ###   ########.fr       */
+/*   Updated: 2025/08/25 16:03:53 by ilemos-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,15 +54,10 @@ static void	ft_hex_lowercase(unsigned int n)
 	}
 	rest = n % 16;
 	if (rest < 10)
-	{
 		c = rest + '0';
-		write (1, &c, 1);
-	}
 	else
-	{
 		c = 'a' + (rest -10);
-		write(1, &c, 1);
-	}
+	write(1, &c, 1);
 }
 
 static void	ft_hex_uppercase(unsigned int n)
@@ -76,15 +71,10 @@ static void	ft_hex_uppercase(unsigned int n)
 	}
 	rest = n % 16;
 	if (rest < 10)
-	{
 		c = rest + '0';
-		write (1, &c, 1);
-	}
 	else
-	{
 		c = 'A' + (rest -10);
-		write(1, &c, 1);
-	}
+	write(1, &c, 1);
 }
 
 int	ft_hex_len(unsigned int n, char c)
